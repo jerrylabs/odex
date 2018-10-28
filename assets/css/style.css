@@ -1,3 +1,8 @@
+:root {
+  --pink: #e01155;
+  --brown: #9d8745;
+}
+
 * {
   outline: none !important;
   box-sizing: border-box;
@@ -35,6 +40,13 @@ header {
   justify-content: space-between;
 }
 
+.header__facebook {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+}
+
 .menu-button {
   display: none;
 }
@@ -51,7 +63,7 @@ h1 {
 }
 
 .subtitle {
-  color: #9D8745;
+  color: var(--brown);
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.3em;
@@ -85,8 +97,24 @@ h1 {
 }
 
 .menu li a.active {
-  color: #9D8745;
+  color: var(--brown);
   border-top: 4px solid rgba(224, 17, 85, 1);
+}
+
+.side-panel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.side-panel__bullet {
+  height: 0.8rem;
+  width: 0.8rem;
+  background: var(--pink);
+  margin: 7rem 4rem;
+  border-radius: 50%;
+  border: 1px solid var(--brown);
 }
 
 section#home {
@@ -99,7 +127,7 @@ section#home {
 }
 
 .home__motto {
-  color: #E01155;
+  color: var(--pink);
   font-size: 1.714rem;
   font-style: italic;
   letter-spacing: 0.45em;
