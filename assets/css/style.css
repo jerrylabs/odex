@@ -142,12 +142,12 @@ p {
 }
 
 .parallax1 {
-  background: black url('../img/bg_home.webp') center top no-repeat;
+  background: black url('../img/bg_home.png') center top no-repeat;
   background-size: cover;
 }
 
 .parallax2 {
-  background: black url('../img/bg_products.webp') center top no-repeat;
+  background: black url('../img/bg_products.png') center top no-repeat;
   background-size: cover;
 }
 
