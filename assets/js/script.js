@@ -1,12 +1,15 @@
 $(document).ready(function(){
 
-  // home, o-nas, produkty, kontakty
-
   var oldSection, newSection, positions = []  ;
 
+  // Mobile menu
+  $('.menu-button').click(function(){
+    $(this).toggleClass('opened');
+    $('.menu').slideToggle();
+  })
 
   $(window).scroll(function(){
-    console.log($(window).scrollTop());
+
     // Switch active menu item accordingly
     ["home", "o-nas", "produkty", "kontakt"].forEach(function(section){
       positions[section] = $("#" + section).offset().top;
@@ -26,10 +29,9 @@ $(document).ready(function(){
       if (["o-nas", "produkty", "kontakt"].includes(newSection)) {
         $(".side-panel__bullet[href='#" + newSection + "']").addClass("active");
       }
-
       oldSection = newSection;
     }
 
   });
 
-})
+});

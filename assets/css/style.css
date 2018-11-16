@@ -51,6 +51,20 @@ header {
 
 .menu-button {
   display: none;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  padding: 2rem;
+  box-sizing: content-box;
+  background: transparent url('../img/menu-open.png') center center no-repeat;
+}
+
+.menu-button.opened {
+  background-image: url('../img/menu-close.png');
 }
 
 h1 {
@@ -409,6 +423,7 @@ section#kontakt h2 {
   flex-wrap: wrap;
   margin: auto;
   padding: 5rem 0;
+  justify-content: center;
 }
 
 .card {
@@ -432,7 +447,6 @@ section#kontakt h2 {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  max-width: 10rem;
   padding: 1rem 0 0.5rem;
 }
 
@@ -484,4 +498,73 @@ footer {
   text-align: center;
   padding: 3.5rem 0;
   font-size: 1.05rem;
+}
+
+@media (min-width: 1001px) {
+  .menu {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__facebook, .side-panel {
+    display: none;
+  }
+  header {
+    position: absolute;
+  }
+  .menu-button {
+    display: block;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    z-index: 1;
+    padding: 10rem;
+  }
+  .menu li {
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+  }
+  .menu li a {
+    color: #e01155;
+    color: var(--pink);
+    font-weight: normal;
+  }
+  .menu li a.active {
+    border: none;
+  }
+
+  .properties {
+    flex-direction: column;
+  }
+
+  p, h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
+
+  .address {
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size:12px;
+  }
 }
