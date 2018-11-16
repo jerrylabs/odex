@@ -1,3 +1,5 @@
+/* Variables has fallback values to keep it readable even in IE */
+
 :root {
   --pink: #e01155;
   --brown: #9d8745;
@@ -57,6 +59,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
+  color: #9d8745;
   color: var(--brown);
   letter-spacing:0.35em;
   font-size: 2rem;
@@ -71,6 +74,7 @@ p {
 }
 
 .brown {
+  color: #9d8745;
   color: var(--brown);
 }
 
@@ -82,6 +86,7 @@ p {
 }
 
 .subtitle {
+  color: #9d8745;
   color: var(--brown);
   font-size: 1rem;
   text-transform: uppercase;
@@ -116,6 +121,7 @@ p {
 }
 
 .menu li a.active {
+  color: #9d8745;
   color: var(--brown);
   border-top: 4px solid rgba(224, 17, 85, 1);
 }
@@ -131,6 +137,7 @@ p {
   display: block;
   height: 0.8rem;
   width: 0.8rem;
+  background: #e01155;
   background: var(--pink);
   margin: 7rem 4rem;
   border-radius: 50%;
@@ -139,6 +146,23 @@ p {
 
 .side-panel__bullet:hover {
   background: var(--brown);
+}
+
+.side-panel__bullet.active {
+  background: var(--brown);
+  position: relative;
+}
+
+.side-panel__bullet.active::after {
+  position: absolute;
+  display: block;
+  content: ' ';
+  border: 1px solid var(--pink);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1rem;
+  top: -0.55em;
+  left: -0.5rem;
 }
 
 .parallax1 {
@@ -159,6 +183,7 @@ section#home {
 }
 
 .home__motto {
+  color: #e01155;
   color: var(--pink);
   font-size: 1.714rem;
   font-style: italic;
@@ -215,6 +240,7 @@ section#o-nas h2 {
 }
 
 .property__title {
+  color: #9d8745;
   color: var(--brown);
   font-size: 1.3rem;
   letter-spacing: 0.2em;
@@ -227,6 +253,7 @@ section#o-nas h2 {
   display: inline-block;
   width: 1.3rem;
   height: 1.3rem;
+  background: #e01155;
   background: var(--pink);
   border-radius: 50%;
   vertical-align: middle;
@@ -266,6 +293,7 @@ section#produkty {
   content: ' ';
   height: 2px;
   width: 22px;
+  background: #e01155;
   background: var(--pink);
   display: block;
   margin-top: 1rem;
@@ -326,6 +354,7 @@ section#produkty {
 .circle {
   height: 26px;
   width: 26px;
+  background: #e01155;
   background: var(--pink);
   border-radius: 50%;
   margin: 0 5px;
@@ -339,6 +368,7 @@ section#kontakt {
   background: black;
   text-align: center;
   padding-top: 7rem;
+  color: #9d8745;
   color: var(--brown);
 }
 
@@ -358,6 +388,7 @@ section#kontakt h2 {
 }
 
 .contact-button {
+  color: #9d8745;
   color: var(--brown);
   text-decoration: none;
   display: inline-block;
@@ -418,6 +449,7 @@ section#kontakt h2 {
 }
 
 .card__contacts {
+  border-left: 6px solid #e01155;
   border-left: 6px solid var(--pink);
   letter-spacing:0.35em;
   font-size: 11px;
@@ -426,6 +458,7 @@ section#kontakt h2 {
 }
 
 .card__mail {
+  color: #9d8745;
   color: var(--brown);
   text-decoration: none;
   display: block;
