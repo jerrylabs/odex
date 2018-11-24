@@ -37,7 +37,7 @@ body {
 header {
   position: fixed;
   top: 0;
-  padding: 30px 105px 0px 40px;
+  padding: 2rem 7.5rem 0 2.5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -57,8 +57,8 @@ header {
   z-index: 2;
   top: 0;
   right: 0;
-  height: 60px;
-  width: 60px;
+  height: 4rem;
+  width: 4rem;
   padding: 2rem;
   box-sizing: content-box;
   background: transparent url('../img/menu-open.png') center center no-repeat;
@@ -100,6 +100,10 @@ p {
   letter-spacing: 0.3em;
 }
 
+.title span {
+  white-space: nowrap;
+}
+
 .subtitle {
   color: #9d8745;
   color: var(--brown);
@@ -116,7 +120,7 @@ p {
 }
 
 .menu li {
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
 .menu li a {
@@ -126,7 +130,7 @@ p {
   font-size: 1.285rem;
   text-transform: uppercase;
   border-top: 4px solid transparent; /* rgba(224, 17, 85, 1) */
-  padding: 5px 8px;
+  padding: 0.3rem 0.5rem;
   line-height: 50px;
   color: #999997;
 }
@@ -194,9 +198,9 @@ p {
 }
 
 section#home {
-  height: 900px;
+  height: 64rem;
   text-align: center;
-  padding: 388px 20px;
+  padding: 27rem 20px;
 }
 
 .home__motto {
