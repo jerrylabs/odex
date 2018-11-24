@@ -32,6 +32,16 @@ $(document).ready(function(){
       oldSection = newSection;
     }
 
+    // Parallax (enlarging) backgrounds
+    $(".parallax1").css({
+      "background-size": (100 + $(window).scrollTop()/25  ) + "%",
+      "background-position": "center " + ($(window).scrollTop()/(-1.5)) + "px"
+    });
+    $(".parallax2").css({
+      "background-size": (100 + ($(window).scrollTop() - $("#produkty").offset().top - 400)/40  ) + "%",
+      "background-position": "center " + (($(window).scrollTop() -  $("#produkty").offset().top - 600)/(-1.5)) + "px"
+    });
+
   });
 
 });

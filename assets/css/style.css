@@ -182,19 +182,21 @@ p {
 
 .parallax1 {
   background: black url('../img/bg_home.png') center top no-repeat;
-  background-size: cover;
 }
 
 .parallax2 {
-  background: black url('../img/bg_products.png') center top no-repeat;
-  background-size: cover;
+  background: white url('../img/bg_products.png') center top no-repeat;
+}
+
+.parallax1, .parallax2 {
+	background-size: 100%;
+  background-attachment: fixed;
 }
 
 section#home {
-  height: 1000px;
+  height: 900px;
   text-align: center;
-  padding-top: 388px;
-  padding-bottom: 388px;
+  padding: 388px 20px;
 }
 
 .home__motto {
@@ -224,6 +226,7 @@ section#o-nas h2 {
   justify-content: space-between;
   max-width: 36rem;
   margin: 5rem auto 0;
+  padding: 0 20px;
 }
 
 .properties {
@@ -290,7 +293,7 @@ section#o-nas h2 {
 
 section#produkty {
   text-align: center;
-  background: black;
+  background: linear-gradient(to bottom, black 70%, transparent 70%);
   padding-top: 7rem;
 }
 
@@ -315,7 +318,7 @@ section#produkty {
 }
 
 .products-images {
-   background: linear-gradient(to bottom, black 70%, white 70%);
+   background: linear-gradient(to bottom, black 70%, transparent 70%);
 }
 
 .products-images img {
@@ -508,6 +511,15 @@ footer {
 }
 
 @media (max-width: 1000px) {
+  .parallax1 {
+    background-size: cover !important;
+    background-position: center top !important;
+  }
+  .parallax2 {
+    background-size: auto !important;
+    background-position: center top !important;
+  }
+
   .header__facebook, .side-panel {
     display: none;
   }
@@ -566,6 +578,12 @@ footer {
 
 @media (max-width: 640px) {
   html {
-    font-size:12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
   }
 }
