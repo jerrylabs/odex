@@ -442,10 +442,33 @@ section#kontakt h2 {
   text-align: left;
   padding-left: 20px;
   padding-bottom: 7rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card__image-shadow-wrap {
+  max-width: 180px;
+  box-shadow: inset 0px 0px 24px 12px rgba(0,0,0,0.9);
+  border-radius: 90px;
 }
 
 .card__image {
   display: block;
+  height: 180px;
+  width: auto;
+  border-radius: 90px;
+}
+
+.card__image--purple {
+  filter: sepia(1) brightness(60%) contrast(200%) hue-rotate(270deg);
+  position: relative;
+  z-index: -1;
+}
+
+.card__image--beige {
+  filter: sepia(1) brightness(60%) contrast(200%) hue-rotate(10deg);
+  position: relative;
+  z-index: -1;
 }
 
 .card__title {
