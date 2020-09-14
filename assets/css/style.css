@@ -321,13 +321,22 @@ section#produkty {
   margin-top: 1rem;
 }
 
-.products-images {
+.products-images.black-stripe {
    background: linear-gradient(to bottom, black 70%, transparent 70%);
 }
 
 .products-images img {
   display: inline-block;
-  margin: 0 0.3rem;
+  margin: 0 0.3rem 0.3rem;
+}
+
+.products-masks {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.code {
+  white-space: nowrap;
 }
 
 .products-descriptions {
