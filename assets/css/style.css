@@ -623,3 +623,10 @@ footer {
     font-size: 10px;
   }
 }
+
+.eu {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+}
