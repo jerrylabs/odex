@@ -145,6 +145,18 @@ p {
   border-top: 4px solid rgba(224, 17, 85, 1);
 }
 
+.menu__shop {
+  width: 40px;
+  height: 100%;
+  background: transparent url('../img/basket.png') center center no-repeat;
+  background-size: 26px 26px;
+  display: inline-block;
+}
+
+.menu__shop:hover {
+  background-image: url('../img/basket-hover.png');
+}
+
 .side-panel {
   position: fixed;
   top: 50%;
@@ -299,6 +311,10 @@ section#produkty {
   text-align: center;
   background: linear-gradient(to bottom, black 70%, transparent 70%);
   padding-top: 7rem;
+}
+
+section#produkty .contact-button {
+  margin-top: 20px;
 }
 
 .products-headline {
