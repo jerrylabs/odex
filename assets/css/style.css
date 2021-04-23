@@ -112,6 +112,10 @@ p {
   letter-spacing: 0.3em;
 }
 
+.menu-wrap {
+  display: flex;
+}
+
 .menu {
   display: flex;
   list-style: none;
@@ -123,7 +127,7 @@ p {
   padding: 0 1rem;
 }
 
-.menu li a {
+.menu li a, .menu__shop {
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
@@ -135,7 +139,7 @@ p {
   color: #999997;
 }
 
-.menu li a:hover {
+.menu li a:hover, .menu__shop:hover {
   color: #414141;
 }
 
@@ -146,11 +150,9 @@ p {
 }
 
 .menu__shop {
-  width: 40px;
-  height: 100%;
-  background: transparent url('../img/basket.png') center center no-repeat;
+  padding-left: 40px;
+  background: transparent url('../img/basket.png') 7px center no-repeat;
   background-size: 26px 26px;
-  display: inline-block;
 }
 
 .menu__shop:hover {
@@ -556,13 +558,13 @@ footer {
   font-size: 1.05rem;
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1151px) {
   .menu {
     display: flex !important;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .parallax1 {
     background-size: cover !important;
     background-position: center top !important;
@@ -605,7 +607,12 @@ footer {
   .menu li a.active {
     border: none;
   }
-
+  .menu__shop {
+    position: absolute;
+    top: 5.5rem;
+    width: 9.5rem;
+    right: 0;
+  }
   .properties {
     flex-direction: column;
   }
