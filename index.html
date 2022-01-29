@@ -4,12 +4,23 @@
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129354954-1"></script>
+		<script async src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-129354954-1');
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			if (window.localStorage) {
+				var clientId = localStorage.getItem('ga:clientId');
+				if (!clientId) {
+					clientId = uuidv4();
+					window.localStorage.setItem('ga:clientId', clientId);
+				}
+				gtag('js', new Date())
+				gtag('config', 'UA-129354954-1', {
+					send_page_view: true,
+					client_storage: 'none',
+					client_id: clientId,
+				})
+			}
 		</script>
 
 		<title>ODEX - textilní výrobní společnost</title>
