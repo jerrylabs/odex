@@ -653,3 +653,8 @@ footer {
   width: 100%;
   max-width: 400px;
 }
+
+.euproject {
+  display: inline-block;
+  margin: 0 10px 20px;
+}
